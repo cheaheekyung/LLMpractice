@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>챗봇</h1>
+    <h1>Chatbot</h1>
     
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">질문 보내기</button>
+        <button type="submit">질문하기</button>
     </form>
 
     {% if assistant_reply %}
-        <h3>챗봇의 응답:</h3>
+        <h3>대답:</h3>
         <p>{{ assistant_reply }}</p>
     {% endif %}
 {% endblock %}
