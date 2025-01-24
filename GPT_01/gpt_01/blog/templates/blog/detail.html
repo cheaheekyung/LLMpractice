@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    
+<h3>{{ post.title }}</h3>
+<p>작성자 : {{ post.author }} </p>
+<hr>
+
+<p> {{ post.content }}</p>
+
+작성일시 : {{ post.created_at }}
+수정일시 : {{ post.updated_at }}
+<hr>
+<a href="{% url 'blog:list' %}"> 목록으로 </a>
+{% endblock content %}
+    

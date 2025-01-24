@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>글 작성</h1>
+<a href="{% url 'blog:list' %}">목록으로</a>
+
+<form action="{% url 'blog:create'  %}" method="POST">
+    {% csrf_token %}
+    {{ forms.as_p }}
+    <input type="submit" value="작성">
+</form>
+
+{% endblock content %}

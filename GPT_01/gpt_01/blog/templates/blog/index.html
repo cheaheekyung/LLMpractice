@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    
+<h1> 환영합니다 </h1>
+
+<a href="{% url 'blog:list' %}">게시판</a>
+<a href="{% url 'chatbot:chatbot' %}">챗봇</a>
+
+{% endblock content %}
+    
